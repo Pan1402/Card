@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --dark-cyan: hsl(158, 36%, 37%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-display: swap;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  color: var(--grayish-blue);
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 32px 0;
+}
+
+.card__img img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card__content {
+  padding: 16px 32px;
+}
+
+.card__label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.card__heading {
+  font-family: "Fraunces";
+  margin: 16px 0;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+
+.card__text {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.card__price {
+  font-size: 2rem;
+  color: var(--dark-cyan);
+  font-family: "Fraunces";
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.card__price span {
+  position: relative;
+  top: -6px;
+  margin-left: 16px;
+}
+
+.card__price span a {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: var(--grayish-blue);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--dark-cyan);
+  width: 100%;
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: var(--dark-blue);
+}
+
+@media screen and (min-width: 56.25em) {
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .card .card__content,
+  .card .card__img {
+    width: 50%;
+  }
+  .card__img img {
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .card__content {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
